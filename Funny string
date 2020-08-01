@@ -1,0 +1,52 @@
+n=int(input())
+lt=[]
+for i in range(n):
+    a=str(input())
+    lt.append(a)
+list1=[]
+for i in lt:
+    for j in i:
+        asc1=ord(j)
+        list1.append(asc1)
+aa=list1[:len(list1)//n]
+bb=list1[len(list1)//n:]
+b=[]
+for j in range(len(aa)-1):
+    diff1=[aa[j+1]-aa[j]]
+    b.append(diff1)
+c=[]
+for j in range(len(bb)-1):
+    diff1=[bb[j+1]-bb[j]]
+    c.append(diff1)
+l=[]
+for i in range(len(lt)):
+    rev=lt[i][::-1]
+    l.append(rev)
+list2=[]
+for i in l:
+    for j in i:
+        asc2=ord(j)
+        list2.append(asc2)
+cc=list2[:len(list2)//n]
+dd=list2[:len(list2)//n]
+d=[]
+for k in range(len(cc)-1):
+    diff2=[cc[k]-cc[k+1]]
+    d.append(diff2)
+e=[]
+for k in range(len(dd)-1):
+    diff2=[dd[k]-dd[k+1]]
+    e.append(diff2)
+if(b==c):
+    print("Funny")
+else:
+    print("Not Funny")
+if(d==e):
+    print("Funny")
+else:
+    print("Not Funny")
+
+
+
+
+
