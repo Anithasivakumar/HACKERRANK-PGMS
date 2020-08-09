@@ -1,0 +1,12 @@
+a=int(input())
+n=list(map(int,input().split()))[:a]
+c=max(n)
+d=n.count(c)
+print(d)
+    
+
+
+
+
+
+    
